@@ -1,0 +1,6 @@
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\bin\Debug\DiceGame.exe.config
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\bin\Debug\DiceGame.exe
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\bin\Debug\DiceGame.pdb
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.csprojResolveAssemblyReference.cache
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.exe
+d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
