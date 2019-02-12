@@ -9,34 +9,37 @@ namespace DiceGame
     class Referee
     {
         Player[] players;
+        int[] scores;
 
         bool draw = false;
 
         public Referee(Player[] pPlayers)
         {
             players = pPlayers;
+
+            scores = new int[players.Length];
         }
 
         public Player GetWinner()
         {
-            Player winningPlayer = null;
+            int winningScore = -1;
 
-            List<Player> winningPlayers = new List<Player>();
+            List<int> winningScores = new List<int>();
 
             for (int i = 0; i < players.Length; i++)
             {
-                players[i].TakeTurn();
+                scores[i] = players[i].TakeTurn();
 
-                if (winningPlayer != null)
+                if (winningScore != -1)
                 {
-                    if (players[i].Score > winningPlayer.Score)
+                    if (scores[i] > scores[winningScore])
                     {
-                        winningPlayer = players[i];
+                        winningScore = i;
                     }
                 }
                 else
                 {
-                    winningPlayer = players[i];
+                    winningScore = i;
                 }
             }
 
@@ -44,13 +47,13 @@ namespace DiceGame
 
             for (int i = 0; i < players.Length; i++)
             {
-                if (players[i] != winningPlayer)
+                if (i != winningScore)
                 {
-                    if(players[i].Score == winningPlayer.Score)
+                    if(scores[i] == scores[winningScore])
                     {
                         draw = true;
 
-                        winningPlayers.Add(players[i]);
+                        winningScores.Add(i);
                     }
                 }
             }
@@ -59,29 +62,29 @@ namespace DiceGame
             {
                 Console.WriteLine("Rematch!");
 
-                winningPlayers.Add(winningPlayer);
+                winningScores.Add(winningScore);
 
-                winningPlayer = null;
+                winningScore = -1;
 
-                foreach (Player player in winningPlayers)
+                foreach (int player in winningScores)
                 {
-                    player.TakeTurn();
+                    scores[player] = players[player].TakeTurn();
 
-                    if (winningPlayer != null)
+                    if (winningScore != -1)
                     {
-                        if (player.Score > winningPlayer.Score)
+                        if (scores[player] > scores[winningScore])
                         {
-                            winningPlayer = player;
+                            winningScore = player;
                         }
                     }
                     else
                     {
-                        winningPlayer = player;
+                        winningScore = player;
                     }
                 }
             }
 
-            return winningPlayer;
+            return players[winningScore];
         }
     }
 }

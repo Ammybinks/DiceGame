@@ -8,6 +8,8 @@ namespace DiceGame
 {
     class SuperDice: Dice
     {
+        int[] rolls = new int[3];
+
         string[] letters = new string[3];
 
         public SuperDice()
@@ -16,17 +18,14 @@ namespace DiceGame
             letters[1] = "B";
             letters[2] = "C";
         }
-
-        public override int Roll()
+        
+        public override int[] Roll()
         {
-            int regRoll = base.Roll();
-            int supRoll = rng.Next(1, 11);
-            int letRoll = CheckLetters();
-
-            int sum = regRoll + supRoll + letRoll;
-            Console.WriteLine($"I rolled {regRoll}, {supRoll} and {letRoll} with a result of {sum}");
-
-            return sum;
+            rolls[0] = base.Roll()[0];
+            rolls[1] = rng.Next(1, 11);
+            rolls[2] = CheckLetters();
+            
+            return rolls;
         }
 
         public int CheckLetters()

@@ -11,6 +11,7 @@ namespace DiceGame
         private string name;
 
         private int score;
+        private int[] scores;
 
         private Dice dice;
 
@@ -18,12 +19,7 @@ namespace DiceGame
         {
             get { return name; }
         }
-
-        public int Score
-        {
-            get { return score; }
-        }
-
+        
         public Player(Dice pDice)
         {
             dice = pDice;
@@ -34,9 +30,20 @@ namespace DiceGame
             name = pName;
         }
 
-        public void TakeTurn()
+        public int TakeTurn()
         {
-            score = dice.Roll();
+            scores = dice.Roll();
+
+            score = 0;
+
+            for(int i = 0; i < scores.Length; i++)
+            {
+                score += scores[i];
+            }
+
+            Console.WriteLine($"{name} rolled {scores[0]}, {scores[1]} and {scores[2]}. Scoring a total of {score}");
+
+            return score;
         }
     }
 }

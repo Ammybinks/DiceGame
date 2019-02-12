@@ -4,3 +4,9 @@ d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\bin\
 d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.csprojResolveAssemblyReference.cache
 d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.exe
 d:\users\nye blythe\documents\visual studio 2015\Projects\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.exe.config
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.exe
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.exe
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.pdb
+D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.csprojResolveAssemblyReference.cache

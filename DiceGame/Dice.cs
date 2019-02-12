@@ -10,9 +10,9 @@ namespace DiceGame
     {
         internal Random rng = new Random();
 
-        public virtual int Roll()
+        public virtual int[] Roll()
         {
-            return rng.Next(1, 7);
+            return new int[1] { rng.Next(1, 7) };
         }
     }
 }
