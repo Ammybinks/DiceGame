@@ -14,11 +14,17 @@ namespace DiceGame
 
         Referee referee;
 
-        Dice dice;
+        Random rng = new Random();
+
+        Dice[] dice;
 
         public void StartGame()
         {
-            dice = new SuperDice();
+            //Initialise dice list
+            dice = new Dice[2];
+
+            dice[0] = new Dice(rng);
+            dice[1] = new SuperDice(rng);
 
             Console.WriteLine("How many players?");
             while (true)
@@ -36,7 +42,7 @@ namespace DiceGame
 
             for (int i = 0; i < players.Length; i++)
             {
-                players[i] = new Player(dice);
+                players[i] = new Player(dice[rng.Next(0, dice.Length)]);
                 Console.WriteLine($"Name player {i}");
                 players[i].SetName(Console.ReadLine());
             }
@@ -47,7 +53,7 @@ namespace DiceGame
             {
                 winner = referee.GetWinner();
 
-                Console.WriteLine($"The winner is {winner.Name} with a score of {winner.Score}");
+                Console.WriteLine($"The winner is {winner.Name}!");
                 Console.ReadKey();
             }
         }

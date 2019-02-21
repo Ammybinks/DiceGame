@@ -32,6 +32,7 @@ namespace DiceGame
 
         public int TakeTurn()
         {
+            Console.WriteLine($"{name} rolled ");
             scores = dice.Roll();
 
             score = 0;
@@ -41,7 +42,7 @@ namespace DiceGame
                 score += scores[i];
             }
 
-            Console.WriteLine($"{name} rolled {scores[0]}, {scores[1]} and {scores[2]}. Scoring a total of {score}");
+            Console.WriteLine($"Scoring a total of {score}");
 
             return score;
         }

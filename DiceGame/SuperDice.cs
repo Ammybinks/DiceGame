@@ -8,11 +8,10 @@ namespace DiceGame
 {
     class SuperDice: Dice
     {
-        int[] rolls = new int[3];
-
         string[] letters = new string[3];
 
-        public SuperDice()
+        public SuperDice(Random pRng)
+            :base(pRng)
         {
             letters[0] = "A";
             letters[1] = "B";
@@ -21,10 +20,14 @@ namespace DiceGame
         
         public override int[] Roll()
         {
+            int[] rolls = new int[3];
+
             rolls[0] = base.Roll()[0];
             rolls[1] = rng.Next(1, 11);
             rolls[2] = CheckLetters();
-            
+
+            Console.WriteLine($"{rolls[0]}, {rolls[1]} and {rolls[2]}");
+
             return rolls;
         }
 
@@ -34,13 +37,10 @@ namespace DiceGame
             {
                 case "A":
                     return 5;
-                    break;
                 case "B":
                     return 3;
-                    break;
                 case "C":
                     return 1;
-                    break;
             }
 
             return 0;

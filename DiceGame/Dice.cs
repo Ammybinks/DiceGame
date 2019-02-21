@@ -8,11 +8,22 @@ namespace DiceGame
 {
     class Dice
     {
-        internal Random rng = new Random();
+        internal Random rng;
+
+        public Dice(Random pRng)
+        {
+            rng = pRng;
+        }
 
         public virtual int[] Roll()
         {
-            return new int[1] { rng.Next(1, 7) };
+            int[] rolls = new int[1];
+
+            rolls[0] = rng.Next(1, 7);
+
+            Console.WriteLine(rolls[0]);
+
+            return rolls;
         }
     }
 }

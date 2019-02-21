@@ -10,3 +10,9 @@ D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
 D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.exe
 D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.pdb
 D:\Users\Nye Blythe\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.csprojResolveAssemblyReference.cache
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.exe.config
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.exe
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.pdb
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\obj\Debug\DiceGame.csprojResolveAssemblyReference.cache
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.exe
+E:\Users\Ammybinks\Documents\GitHub\DiceGame\DiceGame\bin\Debug\DiceGame.pdb
