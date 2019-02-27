@@ -13,14 +13,19 @@ namespace DiceGame
         private int score;
         private int[] scores;
 
-        private Dice dice;
+        private iDice dice;
 
         public string Name
         {
             get { return name; }
         }
-        
-        public Player(Dice pDice)
+
+        public int Score
+        {
+            get { return score; }
+        }
+
+        public Player(iDice pDice)
         {
             dice = pDice;
         }

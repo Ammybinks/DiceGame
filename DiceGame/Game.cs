@@ -16,12 +16,12 @@ namespace DiceGame
 
         Random rng = new Random();
 
-        Dice[] dice;
+        iDice[] dice;
 
         public void StartGame()
         {
             //Initialise dice list
-            dice = new Dice[2];
+            dice = new iDice[2];
 
             dice[0] = new Dice(rng);
             dice[1] = new SuperDice(rng);
@@ -47,13 +47,17 @@ namespace DiceGame
                 players[i].SetName(Console.ReadLine());
             }
 
-            referee = new Referee(players);
+            referee = new Referee();
             
             while(true)
             {
-                winner = referee.GetWinner();
+                for(int i = 0; i < players.Length; i++)
+                {
+                    players[i].TakeTurn();
+                }
 
-                Console.WriteLine($"The winner is {winner.Name}!");
+                referee.GetWinner(players);
+
                 Console.ReadKey();
             }
         }

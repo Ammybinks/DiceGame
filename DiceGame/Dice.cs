@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiceGame
 {
-    class Dice
+    class Dice : iDice
     {
         internal Random rng;
 
